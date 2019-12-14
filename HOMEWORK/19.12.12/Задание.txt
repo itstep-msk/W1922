@@ -1,0 +1,28 @@
+1) Видео
+
+1.1) Используя тег video встроить видео в документ разного формата (Скачать видео можно тут: https://www.sample-videos.com/)
+
+2) CSS селекторы
+
+2.1) Примените слиль color: green ко всем фруктам в корзине
+
+<div class="fruits-cart">
+	<div class="apple">Apple in cart</div>
+	<div class="orange">Orange in cart</div>
+</div>
+
+<div class="apple">Apple out cart</div>
+<div class="orange">Orange out cart</div>
+
+2.2) Используя документацию(http://htmlbook.ru/css/selector/multiclass) 
+Примените слиль color: green ко всем яблокам с Земли
+Примените слиль color: red ко всем яблокам с Марса
+
+Обратите внимание, у элементов по 2 класса.
+
+<div class="fruits-cart">
+	<div class="apple fromEarth">Apple in cart</div>
+	<div class="orange">Orange in cart</div>
+</div>
+
+<div class="apple fromMars">Apple out cart</div>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS - селекторы</title>
+</head>
+<body>
+
+<h1>Заголовок h1</h1>
+<div>
+	DIV - <b>элемент</b>
+	<br>
+	div - <i>это универсальный тег html</i>
+</div>
+
+<div class="fruits">
+	<div class="apple">Яблоки во фруктах</div>
+</div>
+
+<div class="apple">Яблоко отдельно</div>
+
+<div class="solar-system">
+	<div class="earth">
+		<div class="human">I'm here</div>
+	</div>
+
+	<div class="human">In space</div>
+</div>
+
+<style>
+	.solar-system .earth .human {
+		color: brown;
+	}
+
+	.fruits .apple { /* ко всем .apple, которые внутри .fruits */
+		color: blue;
+	}
+	.apple { /* ко всем .apple */
+		color: green;
+	}
+
+	h1 {
+		color: orange;
+	}
+
+	b {
+		font-size: 36px;
+		color: aqua;
+	}
+
+	i {
+		color: orange;
+	}
+
+	/*div {
+		color: green;
+	}*/
+</style>
+
+</body>
+</html>
