@@ -1,0 +1,2 @@
+1) Сделать верстку как в файле circle-in-circle.png
+2) Сделать верстку как в файле template.png (Размеры примерные и отступы тоже, рамка делается через свойство border http://htmlbook.ru/css/border)

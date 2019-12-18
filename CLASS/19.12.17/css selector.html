@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS селекторы</title>
+</head>
+<body>
+
+<div class="pyatorochka">
+	<div class="fruits">
+		<div class="apple big">Яблоки из пяторочки (большие)</div>
+		<div class="orange">Апельсины из пяторочки</div>
+		<div class="banana">Бананы из пяторочки</div>
+	</div>
+</div>
+
+<div class="magnit">
+	<div class="fruits">
+		<div class="apple small">Яблоки из магнита (маленькие)</div>
+	</div>
+</div>
+
+<style>
+	.apple {
+		font-family: "Arial";
+	}
+
+	.pyatorochka .apple {
+		color: green;
+	}
+
+	.magnit .apple {
+		color: red;
+	}
+
+	.apple.big {
+		font-size: 30px;
+	}
+
+	.apple.small {
+		font-size: 8px;
+	}
+
+	.apple, .orange, .banana {
+		letter-spacing: 10px;
+	}
+
+	/*
+		1) Элемент внутри элемента
+		.a .b {} // раздельно
+
+		2) Элемент, в котором несколько классов
+		.a.b {} // слитно
+
+		3) Перечисление
+		.a, .b, .c {}
+	*/
+
+	/* Сделать верстку из тегов на основе селетора */
+	.rose .item .shop.meat {
+		color: purple;
+	}
+
+	.Russia .panzer.large {
+		color: green;
+	}
+
+	.USA .panzer.large {
+		color: yellow;
+	}
+
+	/* Стили применяются к последнему элементу в селекторе */
+</style>
+
+<div class="rose">rose
+	<div class="item">item
+		<div class="shop meat">Мясо</div>
+	</div>		
+</div>
+<!-- Окрасить большой танк из России в зеленый, Американский - желтый -->
+<div class="Russia">
+	<div class="military">	
+		<div class="panzer large">Russia Танк большой</div>
+		<div class="panzer small">Russia Танк маленький</div>
+	</div>
+</div>
+
+<div class="USA">
+	<div class="military">	
+		<div class="panzer large">USA Танк большой</div>
+		<div class="panzer small">USA Танк маленький</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>
