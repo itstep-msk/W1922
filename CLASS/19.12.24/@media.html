@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Media (адаптивная верстка)</title>
+	<!-- Включает адаптивную верстку, при уменьшении - подстраивается а не сжимается -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="apple"></div>
+<div class="rat"></div>
+<div class="titan"></div>
+
+<style>
+	.apple {
+		width: 20%;
+		height: 100px;
+		background: green;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.rat {
+		width: 50%;
+		height: 100px;
+		background: grey;
+		display: inline-block;
+		vertical-align: top;
+		margin-left: -4px;
+	}
+
+	.titan {
+		width: 30%;
+		height: 100px;
+		background: black;
+		display: inline-block;
+		vertical-align: top;
+		margin-left: -4px;
+	}
+
+	/*
+	min-width: 1000px => от 1000px и выше
+	width: 1000px => только для 1000px
+	max-width: 1000px => от 1000px и ниже
+	*/
+
+	@media (max-width: 900px) { /* От 900 и ниже */
+		.apple {
+			width: 100%;
+		}
+
+		.rat {
+			width: 70%;
+			margin-left: 0px;
+		}
+	}
+
+	@media (max-width: 500px) { /* От 500 и ниже */
+		.rat {
+			width: 100%;
+		}
+
+		.titan {
+			width: 100%;
+			margin-left: 0px;
+		}
+	}
+</style>
+
+</body>
+</html>

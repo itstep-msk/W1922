@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Praction 01</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="container-left">
+	<div class="header"></div>
+	<div class="section-mobile"></div>
+	<div class="nav"></div>
+</div>
+<div class="container-right">
+	<div class="section-desktop"></div>
+</div>
+
+<style>
+	.container-left {
+		width: 70%;
+    	display: inline-block;
+	}
+
+	.container-right {
+		width: 30%;
+	    display: inline-block;
+	    margin-left: -4px;
+	}
+
+	.header {
+		background: green;
+		height: 100px;
+	}
+
+	.nav {
+		background: orange;
+		height: 100px;
+	}
+
+	.section-desktop {
+	    background: brown;
+	    height: 200px;
+	}
+
+	.section-mobile {
+	    background: brown;
+	    height: 200px;
+	    display: none;
+	}
+
+	@media (max-width: 500px) {
+		.container-left {
+			width: 100%;
+		}
+
+		.section-mobile {
+			display: block;
+			height: 100px;
+		}
+
+		.section-desktop {
+			display: none;
+		}
+	}
+</style>
+
+</body>
+</html>

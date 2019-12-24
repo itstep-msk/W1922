@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>font-face</title>
+</head>
+<body>
+
+<h1 class="header">Hello world open sans font</h1>
+<h1>Hello world default font</h1>
+
+<style>
+	@font-face {
+		src: url("OpenSans-Regular.ttf");
+		font-family: "MyOpenSans"; /* Сами придумываем имя */
+	}
+
+	.header {
+		font-family: "MyOpenSans";
+	}
+	/* Как узнать откуда браузер забирает шрифт ? */
+	/* Dev tools / Стили / Computed */
+	/* Local file / Network resource */
+</style>
+
+</body>
+</html>
