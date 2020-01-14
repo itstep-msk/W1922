@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>After Before</title>
+</head>
+<body>
+
+<div class="chicken">
+	<div class="rabbit">rabbit</div>
+</div>
+
+<br>
+<div class="dog"></div>
+
+<div class="header">Наши ФОТО</div>
+<div class="header">Товары</div>
+<div class="header">Контакты</div>
+
+<style>
+	.header:before {
+		display: inline-block;
+		content: "<<<<<<"
+	}
+
+	.header:after {
+		display: inline-block;
+		content: ">>>>>>"
+	}
+
+	.chicken {
+		width: 100px;
+		height: 100px;
+		background: orange;
+	}
+
+	.rabbit {
+		width: 50px;
+		height: 50px;
+		background: purple;
+	}
+
+	/*****/
+
+	.dog {
+		width: 100px;
+		height: 100px;
+		background: orange;
+	}
+
+	.dog:after {
+		display: block; /* Задать какой-нибудь display  */
+		content: "rabbit"; /* content - поумолчанию дe;олжен быть */
+		width: 50px;
+		height: 50px;
+		background: purple;
+	}
+
+	.dog:before {}
+</style>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Центрирование</title>
+</head>
+<body>
+
+<div class="container">
+	<div class="block"></div>
+</div>
+
+<div class="container">
+	<div class="inline-block"></div>
+</div>
+
+<div class="container">
+	<div class="transform"></div>
+</div>
+
+<div class="container">
+	<div class="absolute"></div>
+</div>
+
+
+<style>
+	.block, .inline-block, .absolute, .transform {
+		width: 100px;
+		height: 100px;
+	}
+
+	.container {
+		text-align: center; /* действует и на строчные элементы внутри */
+		position: relative;
+	}
+
+	.block {
+		display: block;
+		background: orange;
+		margin: auto;
+	}
+
+	.inline-block {
+		display: inline-block;
+		background: yellow;
+	}
+
+	.absolute {
+		background: purple;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
+	.transform {
+		background: green;
+		margin-left: 50%;
+    	transform: translateX(-50%);
+	}
+</style>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transform</title>
+</head>
+<body>
+
+<div class="scale"></div>
+<div class="rotate"></div>
+<div class="skew"></div>
+<div class="translate"></div>
+
+<style>
+	.scale, .rotate, .skew, .translate {
+		width: 100px;
+		height: 100px;
+		transition: all, .25s;
+	}
+
+	.scale {
+		background: orange;
+	}
+
+	.scale:hover {
+		transform: scale(2);
+		opacity: .5;
+	}
+
+	.rotate {
+		background: yellow;
+	}
+
+	.rotate:hover {
+		transform: rotateZ(45deg);
+	}
+
+	.skew {
+		background: green;
+	}
+
+	.skew:hover {
+		transform: skew(10deg, 20deg);
+	}
+
+	.translate {
+		background: purple;
+	}
+
+	.translate:hover {
+		transform: translate(50px, 50px);
+	}
+</style>
+
+</body>
+</html>

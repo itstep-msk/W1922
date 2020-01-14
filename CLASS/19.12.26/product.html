@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Товар</title>
+</head>
+<body>
+
+<div class="product">
+	<div class="pic"></div>
+	<div class="caption">iPhone 8</div>
+	<div class="price">29 990</div>
+	<input type="submit" class="button" value="Купить">
+</div>
+
+<style>
+	.product {
+		width: 120px;
+		border: 1px solid #dcdcdc;
+		padding: 10px;
+		font-family: "Arial";
+		text-align: center;
+		position: relative;
+    	overflow: hidden; /* Скрыть, все что за пределами элемента */
+	}
+
+	.product:before {
+		content: "New";
+		display: block;
+		background: red;
+	    position: absolute;
+	    right: -35px;
+	    top: 10px;
+	    padding: 4px 45px;
+	    transform: rotate(45deg);
+	}
+
+	.pic {
+		width: 100%;
+	    height: 150px;
+	    background-image: url(iphone.png);
+	    background-size: 100%;
+	    background-repeat: no-repeat;
+	    margin-bottom: 20px;
+	}
+
+	.caption {
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+
+	.price {
+		margin-bottom: 10px;
+	}
+
+	.button {
+		border-radius: 5px;
+		border: none;
+		background: green;
+		color: white;
+		padding: 5px 10px;
+		cursor: pointer;
+		transition: all, 0.25s;
+		outline: none;
+	}
+
+	.button:hover {
+		background: #00b100;
+	}
+</style>
+
+</body>
+</html>

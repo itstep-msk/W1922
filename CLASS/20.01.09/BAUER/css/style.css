@@ -1,0 +1,23 @@
+body {
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.header__additional {
+    background: #f8f9fb;
+    padding: 12px 0px;
+}
+
+.header__additional-address {
+	display: inline-block;
+    font-size: 14px;
+    margin-left: 25px;
+    font-weight: 600;
+    color: #8a99c4;
+    margin-right: 36px;
+}
