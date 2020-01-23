@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switch</title>
+</head>
+<body>
+
+<script>
+	var result = prompt("Введите фрукт");
+
+	switch(result) {
+		case "apple":
+			console.log("Ввели яблоко");
+			break;
+		case "orange":
+			console.log("Ввели апельсин");
+			break;
+		case "banana":
+			console.log("Ввели банан");
+			break;
+		default:
+			console.log("Ничего не подошло");
+	}
+
+	if(result == "apple") {
+		console.log("Ввели яблоко");
+	} else if(result == "orange") {
+		console.log("Ввели апельсин");
+	} else if(result == "banana") {
+		console.log("Ввели банан");
+	} else {
+		console.log("Ничего не подошло");
+	}
+
+	// == или ===
+	// "5" == 5 // true
+	// "5" === 5 // false
+	// "5" === "5" // true
+	// 5 === 5 // true
+</script>
+
+</body>
+</html>

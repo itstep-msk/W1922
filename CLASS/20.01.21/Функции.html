@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Функции</title>
+</head>
+<body>
+
+<script>
+	// var name = "Alex";
+	// console.log("Hello " + name);
+
+	// name = "Bob";
+	// console.log("Hello" + name);
+
+	// name = "Cate";
+	// console.log("Hello" + name);
+
+	// function НазваниеФункции(Аргументы) { ТелоФункции }
+
+	function greeting(name) {
+		//var name = "Alex";
+		console.log("Hello " + name);
+	}
+
+	greeting("Alex");
+	greeting("Bob");
+	greeting("Cate");
+
+	/* Создайте функцию calc, которая принимает 2 аргумента, складывает их и выводит результат в консоль*/
+
+	function calc(a, b) {
+		console.log(a + b);
+	}
+
+	calc(10, 15);
+	calc(1, 6);
+	calc(5, 14);
+
+	/* Создайте функцию discriminant, которая принимает 3 аргумента, вычисляет по формуле и выводит результат в консоль*/
+
+	//b * b - 4 * a * c
+	//a:1, b:5, c:6 = 1
+
+	function discriminant(a,b,c) {
+		console.log(b*b - 4 * a * c);
+	}
+
+	discriminant(1,5,6)
+
+	// Оператор return
+
+	function calcReturn(a, b) {
+		var c = a + b;
+
+		return c;
+	}
+
+	var result = calcReturn(1, 6);
+	//var result = 7
+
+	console.log(result); // 7
+
+	function getLengthString(str) {
+		return str.length;
+		console.log("Это никогда не отобразится");
+	}
+
+	var str01 = getLengthString("Hello world");
+	var str02 = getLengthString("Apple");
+	var str03 = getLengthString("fdsjfhjksdhf");
+
+	console.log(str01, str02, str03); // 11 5 12
+
+	function checkString(str) {
+		if(str.length > 5) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	var check01 = checkString("Hello world");
+	var check02 = checkString("Hola");
+
+	console.log(check01, check02); // true false
+
+	function showMessage(count, prefix, message) {
+		for(var i = 0; i < count; i++) {
+			console.log(prefix + message + i);
+		}
+	}
+
+	showMessage(2, "###", "info ");
+	showMessage(2, ">>>", "warging ");
+	showMessage(2, "!!!", "error ");
+</script>
+
+</body>
+</html>

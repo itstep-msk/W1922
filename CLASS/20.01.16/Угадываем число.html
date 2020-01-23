@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Угадываем число</title>
+</head>
+<body>
+
+<script>
+	var num = 10;
+	// Math.floor(Math.random()*100)
+	var numFromUser = prompt("Введите число");
+
+	// if(num == Number(numFromUser)) {
+	// 	console.log("Угадали");
+	// } else {
+	// 	console.log("Попробуйте еще раз...");
+	// }
+
+	if(num < Number(numFromUser)) {
+		console.log("Ваше число больше");
+	} else if(num > Number(numFromUser)) {
+		console.log("Ваше число меньше");
+	} else if(num == Number(numFromUser)) {
+		console.log("Угадали...");
+	} else {
+		console.log("Введите число...");
+	}
+</script>
+
+</body>
+</html>

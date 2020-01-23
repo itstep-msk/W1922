@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Преобразование типов</title>
+</head>
+<body>
+
+<script>
+	var numStr = "5";
+	var numStrPx = "50px";
+	var floatStrPx = "50.123px";
+
+	console.log(Number(numStr)); // 5
+	console.log(parseInt(numStr)); // 5
+	console.log(+numStr); // 5
+
+	console.log(Number(numStrPx)); // NaN
+	console.log(parseInt(numStrPx)); // 50
+	console.log(parseFloat (floatStrPx)); // 50.123
+	console.log(+numStrPx); // NaN
+
+	console.log(String(100)); // "100"
+	//console.log(100 + ""); // "100"
+	console.log(Boolean(100)); // true
+	//console.log(!!100); // true
+</script>
+
+</body>
+</html>

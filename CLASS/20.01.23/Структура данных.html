@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Структура данных</title>
+</head>
+<body>
+
+<script>
+	// У всех есть свойства и методы кроме: null, undefined
+	// Если вызывать несуществующиее свойство у всех кроме null и undefined то НИЧЕГО НЕ БУДЕТ.
+	// Если у null вызвать свойств будет ошибка: null.abcdef // ERROR!!!
+
+	// Числа
+
+	var n = 5.123;
+
+	console.log(n.toFixed()); // Округляет // "5"
+	console.log(typeof n.toFixed()); // "string"
+	console.log(n); // 5.123
+
+	n = n.toFixed();
+	console.log(n); // "5"
+
+	console.log(5 / 0); // Infinity
+	console.log(-5 / 0); // -Infinity
+	console.log("fdsfs" / 0); // NaN
+
+	// Строки
+
+	var str = "Hello world";
+
+	console.log(str.toUpperCase()) // "HELLO WORLD"
+	console.log(str.toLowerCase()) // "hello world"
+	console.log(str.length) // 11
+	console.log(str.charAt(0)) // H
+	console.log(str.indexOf("w")) // 6
+	console.log(str.indexOf("o")) // 4
+	console.log(str.lastIndexOf("o")) // 7
+	console.log(str) // "Hello world"
+	console.log("a" > "b") // false
+	console.log("a".charCodeAt() > "b".charCodeAt()) // false
+	console.log(97 > 98) // false
+	console.log(2 > "14") // false
+	console.log(2 > 1) // true
+
+	// Логические
+
+	var bool = true;
+
+	console.log(bool.toString()) // "true"
+</script>
+
+</body>
+</html>

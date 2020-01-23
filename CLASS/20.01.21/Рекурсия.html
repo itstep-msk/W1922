@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Рекурсия</title>
+</head>
+<body>
+
+<script>
+	// 5! = 5 * 4 * 3 * 2 * 1;
+	function calcFact(n) {
+		if(n === 1) {
+			return 1;
+		} else {
+			return n * calcFact(n - 1);
+		}
+	}
+
+	var result = calcFact(10000);
+
+	console.log(result)
+
+	// function calcFact(5) {
+	// 	if(5 === 1) {
+	// 		return 1;
+	// 	} else {
+	// 		return 5 * 24;
+	// 	}
+	// }
+
+	// function calcFact(4) {
+	// 	if(4 === 1) {
+	// 		return 1;
+	// 	} else {
+	// 		return 4 * 6;
+	// 	}
+	// }
+
+	// function calcFact(3) {
+	// 	if(3 === 1) {
+	// 		return 1;
+	// 	} else {
+	// 		return 3 * 2;
+	// 	}
+	// }
+
+	// function calcFact(2) {
+	// 	if(2 === 1) {
+	// 		return 1;
+	// 	} else {
+	// 		return 2 * 1;
+	// 	}
+	// }
+
+	// function calcFact(1) {
+	// 	if(1 === 1) {
+	// 		return 1;
+	// 	} else {
+	// 		return 2 * calcFact(1);
+	// 	}
+	// }
+</script>
+
+</body>
+</html>

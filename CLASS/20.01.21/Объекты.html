@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Объекты</title>
+</head>
+<body>
+
+<script>
+	// var obj = {
+	//      ключ: значение	
+	// 		свойство: значение,
+	// 		метод: function() {
+	//
+	// 		}
+	// }
+
+	// {ключ:значение, ключ:значение, ключ:значение}
+	var fruits = {
+		name: "apple",
+		count: 10,
+		showFruit: function() {
+			console.log("Это " + fruits.name);
+		}
+	}
+
+	console.log(fruits.name); // "apple"
+	console.log(fruits["name"]); // "apple"
+	console.log(fruits.count) // 10
+	fruits.showFruit(); // "Это apple"
+	fruits["showFruit"](); // "Это apple"
+
+	var translate = {
+		"Привет": "Hello"
+	}
+
+	console.log(translate["Привет"]); // "Hello"
+
+	// Создайте объект calc с двумя свойствами a, b и методом sum
+	// Метод будет складывать два числа
+
+	var calc = {
+		a: 10,
+		b: 20,
+		sum: function() {
+			console.log(this.a + this.b);
+		}
+	}
+
+	calc.sum();
+
+	var coords = {
+		click: {
+			x: 10,
+			y: 20
+		},
+		move: {
+			x: 30,
+			y: 40
+		}
+	}
+
+	console.log(coords.click.x)
+	// 
+</script>
+
+</body>
+</html>

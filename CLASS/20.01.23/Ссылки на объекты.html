@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Сссылки на объекты</title>
+</head>
+<body>
+
+<script>
+	var moscow = {
+		apple: 10
+	}
+
+	var sochi = moscow;
+
+	console.log(sochi); // { apple: 10 }
+	sochi.apple = 20;
+	console.log(sochi); // { apple: 20 }
+	sochi.orange = 20;
+
+	console.log(moscow) // { apple: 20, orange: 20 }
+
+	//
+	var fruits = {
+		apple: 10,
+		orange: 20,
+		banana: 30
+	}
+
+	fruits.apple;
+	fruits["apple"];
+
+	var fruitsCopy = {};
+	var count = 0;
+
+	for(var key in fruits) { // в key попадает название ключа(свойства)
+		console.log(key) // "apple", "orange", "banana"
+		console.log(fruits[key]) // 10, 20, 30
+		// fruitsCopy["apple"] = 10
+		fruitsCopy[key] = fruits[key];
+		count++;
+	}
+
+	console.log(count) // 3
+
+	console.time();
+
+	for(var i = 0; i < 10000000; i++) {}
+
+	console.timeEnd();
+
+	console.error("Ошибка")
+	console.info("Инфо")
+
+	// Перебрать объект с массивами
+
+	var warehouse = {
+		apples: [10, 20, 30, 40, 50],
+		oranges: [100, 400, 7534],
+		banana: [0, 5432, 43]
+	}
+
+	for(var key in warehouse) {
+		for(var i = 0; i < warehouse[key].length; i++) {
+			console.log(warehouse[key][i]);
+		}
+	}
+
+	var goods = [10, 20, [30, [40, 50]]];
+
+	console.log(goods[2][1][1]) // 50
+
+</script>
+
+</body>
+</html>

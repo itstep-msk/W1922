@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Цикл</title>
+</head>
+<body>
+
+<script>
+	// for(Создание четчика; Условие; Увеличение счетчика) {
+	//     Тело цикла
+	// }
+
+	for(var i = 0; i < 5; i++) {
+		console.log(i); // 0 - 4
+	}
+	console.log(i); // 5
+
+	/*
+	var i = 0;
+
+	while(i < 5) {
+		i++;
+
+		console.log(i)
+	}
+
+	do {
+	
+	} while()
+	*/
+
+	/*
+		1) Создание счетчика var i = 0;
+		2) Проверка условия i < 5;
+		3) Выполнение тела цикла console.log("Hello world");
+		4) Увеличение счетчика
+		5) go to 2)
+	*/
+
+	var num = 10;
+
+	for(var i = 0; i < 100; i++) {
+		if(i == num) {
+			console.log("Число угаданно...");
+			break; // Остановить цикл
+		}
+		console.log("Число неугаданно...");
+	}
+
+	for(var i = 0; i < 10; i++) {
+		if(i % 2 == 1) {
+			continue; // Пропустить итерацию цикла
+		}
+
+		console.log("Цикл с пропуском итерации: " + i);
+	}
+
+	for(var i = 0; i < 10; i++) {
+		if(i % 2 == 1) {
+			console.log("#####################")
+		} else {
+			console.log("---------------------")
+		}
+	}
+</script>
+
+</body>
+</html>
