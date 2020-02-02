@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checklist</title>
+</head>
+<body>
+
+<input type="text" class="text">
+<input type="submit" class="button" value="+">
+<div class="list"></div>
+
+<script>
+	var text = document.querySelector(".text");
+	var button = document.querySelector(".button");
+	var list = document.querySelector(".list");
+
+	button.onclick = function() {
+		// Забрать / присвоить элементам формы - value 
+		// Забрать / присвоить элементам обычным - innerHTML
+
+		list.innerHTML = list.innerHTML + text.value + "<br>";
+		text.value = "";
+	}
+</script>
+
+</body>
+</html>

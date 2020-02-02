@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+
+<div class="apple">Яблоко</div>
+
+<script>
+	console.log(document); // Весь наш документ
+
+	// https://github.com/itstep-msk/GUIDE
+
+	/*
+	1) Найхождение элемента / элементов
+
+	2) МОДИФИКАЦИЯ (Изменить содержимое, добавить содержимое, добавить класс, атрибут и т.д. )
+	
+	3) ОБРАБАТЫВАТЬ СОБЫТИЯ (нажали на элемент, навели курсором, прокрутили страницу(скролл) и т.д.)
+
+	*/
+
+	// 1)
+
+	var apple = document.querySelector(".apple");
+
+	console.log(apple); // ссылка на HTML объект
+	console.log(apple.innerHTML); // "Яблоко"
+	console.log(apple.classList); // ["apple"]
+
+	apple.innerHTML = "APPPLEEEEEEEEEEEEES";
+
+	apple.onclick = function() {
+		// Функция вызывается тогда когда мы нажимаем на элемент
+
+		console.log("На меня нажали!");
+	}
+</script>
+
+</body>
+</html>

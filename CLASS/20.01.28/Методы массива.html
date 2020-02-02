@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Методы массива</title>
+</head>
+<body>
+
+<script>
+	var fruits = ["apple", "orange", "plum"];
+
+	// Модификация массива
+	fruits.push("cherry");
+	console.log(fruits) // ["apple", "orange", "plum", "cherry"]
+
+	fruits.pop() // удаляет последний элемент массива
+	console.log(fruits) // ["apple", "orange", "plum"]
+
+	fruits.unshift("banana") // Добавляет в начало
+	console.log(fruits); // ["banana", "apple", "orange", "plum"]
+	
+	fruits.shift(); // Удаляет с начала
+	console.log(fruits); // ["apple", "orange", "plum"]
+
+	// Переберающие методы
+	var fruits = ["apple", "orange", "plum"];
+
+	// forEach
+	fruits.forEach(function(item, index) {
+		console.log(item, index)
+	});
+
+	fruits.forEach(fruitsCallBack); // указали ссылку на функцию
+
+	function fruitsCallBack(item, index) {
+		console.log(item, index)
+	}
+
+	// filter
+	var cart = fruits.filter(function(item) {
+		if(item.length <= 5) {
+			return true; // Будет в новом массиве
+		} else {
+			return false; // Не будет в новом массиве
+		}
+	})
+	console.log(fruits) // ["apple", "orange", "plum"]
+	console.log(cart); // ["apple", "plum"]
+
+	// map - трансформация массива
+
+	var fruitsLength = fruits.map(function(item) {
+		return item.length;
+	})
+
+	console.log(fruitsLength) // [5, 6, 4];
+
+	// sort
+	var numbers = [5, 6, 23, 10, 2, 4];
+
+	numbers.sort();
+
+	console.log(numbers) // [10, 2, 23, 4, 5, 6]
+
+	var numbers = [5, 6, 23, 10, 2, 4];
+
+	numbers.sort(function(a, b) {
+		if(a < b) {
+			return -1;
+		} else {
+			return 1;
+		}
+	});
+
+	console.log(numbers) //  [2, 4, 5, 6, 10, 23]
+
+	// split, join
+
+	var str = "hello";
+	var date = "05/05/1992";
+
+	console.log(str.split("")); // ["h", "e", "l", "l", "o"]
+	console.log(date.split("/")); // ["05", "05", "1992"]
+
+	var users = ["Alex", "Bob", "Kate"];
+
+	console.log(users.join("")) // AlexBobKate
+	console.log(users.join(":")) // Alex:Bob:Kate
+	console.log(users.join("-")) // Alex-Bob-Kate
+
+	console.log("hello".split("").reverse().join(""));
+
+	
+
+</script>
+
+</body>
+</html>

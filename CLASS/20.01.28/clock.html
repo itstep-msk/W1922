@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clock</title>
+</head>
+<body>
+
+<style>
+	.clock {
+	    width: 200px;
+	    height: 200px;
+	    border: 5px solid black;
+	    border-radius: 50%;
+	    margin: auto;
+	    margin-top: 100px;
+	    position: relative;
+	}
+
+	.arrow {
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    margin: auto;
+	    bottom: 100px;
+	    transform-origin: 50% 100%;
+	}
+
+	.hour {
+		width: 20px;
+	    height: 60px;
+	    background: black;
+		
+	}
+
+	.minutes {
+		width: 10px;
+	    height: 75px;
+	    background: blue;
+	}
+
+	.seconds {
+		width: 5px;
+	    height: 90px;
+	    background: red;
+	}
+</style>
+
+<div class="clock">
+	<div class="arrow hour"></div>
+	<div class="arrow minutes"></div>
+	<div class="arrow seconds"></div>
+</div>
+
+<script>
+	var hour = document.querySelector(".hour");
+	var minutes = document.querySelector(".minutes");
+	var seconds = document.querySelector(".seconds");
+
+	//setInterval(Функция, 1000)
+
+	setInterval(function() {
+		// Эта функция будет вызыватся через каждую секунду - бесконечно
+		var date = new Date(); // создание объекта даты
+		
+		hour.style.transform = "rotate(" + 360 / 12 * date.getHours() + "deg)";
+		minutes.style.transform = "rotate(" + 360 / 60 * date.getMinutes() + "deg)";
+		seconds.style.transform = "rotate(" + 360 / 60 * date.getSeconds() + "deg)";
+		console.log("hello world")
+	}, 1000);
+	
+	//"rotate(" + 630 + "deg)"
+	//"rotate(630deg)"
+
+	//hour.style.fontSize
+	//hour.style.color
+	//hour.style.borderRadius
+
+</script>
+
+</body>
+</html>
